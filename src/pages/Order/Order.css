@@ -1,44 +1,16 @@
 .order {
-  padding-top: 21px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.menu__sidebar {
-  max-width: 232px;
-}
-
-.menu__form {
-  position: relative;
-}
-
-.menu__form-input {
-  padding: 12px 40px 12px 12px;
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #ffffff;
-  font-size: 16px;
-  line-height: 1.25;
-}
-
-.menu__form-input:focus {
-  outline: #ffffff;
-}
-
-.menu__form-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
+.order > .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 12px;
-  height: 100%;
-  background-color: transparent;
-  border: unset;
+  justify-content: space-between;
 }
 
-.menu__form-icon {
-  width: 20px;
-  height: 20px;
-  fill: #55595c;
+.order__sidebar-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 232px;
 }

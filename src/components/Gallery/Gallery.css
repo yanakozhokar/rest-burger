@@ -41,6 +41,10 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
+.gallery__special-offer-card:hover {
+  cursor: pointer;
+}
+
 .gallery__special-offer-card::before {
   content: '';
   display: block;
@@ -50,7 +54,11 @@
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background: rgba(62, 62, 62, 0.5);
+  background-color: rgba(62, 62, 62, 0.5);
+}
+
+.gallery__special-offer-card:hover::before {
+  background-color: rgba(62, 62, 62, 0.8);
 }
 
 .gallery__special-offer-title {
@@ -82,6 +90,11 @@
   font-weight: 400;
   text-transform: capitalize;
   background-color: #f44336;
+}
+
+.gallery__special-offer-card:hover .gallery__special-offer-btn {
+  background-color: #df392d;
+  transition: all 0.4s;
 }
 
 .gallery__special-offer-info-icon {

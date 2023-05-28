@@ -1,0 +1,18 @@
+.menu__list {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.menu__item {
+  padding: 16px 20px;
+  border-left: 1px solid #f9f9f9;
+  border-right: 1px solid #f9f9f9;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}

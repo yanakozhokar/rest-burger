@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rest-burger/static/css/main.7acaea2f.css",
-    "main.js": "/rest-burger/static/js/main.f8ea158f.js",
+    "main.js": "/rest-burger/static/js/main.ed3dc783.js",
     "index.html": "/rest-burger/index.html",
     "main.7acaea2f.css.map": "/rest-burger/static/css/main.7acaea2f.css.map",
-    "main.f8ea158f.js.map": "/rest-burger/static/js/main.f8ea158f.js.map"
+    "main.ed3dc783.js.map": "/rest-burger/static/js/main.ed3dc783.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.f8ea158f.js"
+    "static/js/main.ed3dc783.js"
   ]
 }

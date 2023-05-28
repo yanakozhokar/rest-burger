@@ -7,10 +7,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-.order__sidebar-left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 232px;
-}

@@ -51,7 +51,7 @@ export const Menu = () => {
           Sides
         </li>
         <li className="menu__item">
-          <Drinks width={18} height={18} />
+          <Drinks width={18} height={18} className="menu__icon" />
           Drinks
         </li>
       </ul>

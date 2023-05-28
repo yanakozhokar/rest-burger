@@ -21,11 +21,18 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 1.6;
+  text-transform: capitalize;
   color: #414551;
 }
 
 .menu__item:not(:last-child) {
   border-bottom: 1px solid #f9f9f9;
+}
+
+.menu__item:hover,
+.menu__item:focus {
+  cursor: pointer;
+  color: #f30;
 }
 
 .menu__icon {

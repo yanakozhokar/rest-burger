@@ -12,7 +12,8 @@
   border-right: 1px solid #f9f9f9;
 }
 
-.header-menu__item:hover {
+.header-menu__item:hover,
+.header-menu__item:focus {
   cursor: pointer;
   background-color: #f9f9f9;
 }

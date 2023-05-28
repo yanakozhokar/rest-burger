@@ -3,7 +3,8 @@
   padding-bottom: 20px;
 }
 
-.order > .container {
+.order.container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }

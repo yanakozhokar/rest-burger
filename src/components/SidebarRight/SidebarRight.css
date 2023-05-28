@@ -1,0 +1,10 @@
+.sidebar-right {
+  flex-shrink: 0;
+  max-width: 232px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.sidebar-right > p {
+  width: 232px;
+}

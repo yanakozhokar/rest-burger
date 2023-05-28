@@ -1,6 +1,7 @@
 .sidebar-left {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 20px;
   max-width: 232px;
 }

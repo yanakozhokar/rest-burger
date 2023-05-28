@@ -1,5 +1,5 @@
 import { Logo } from 'components/Logo/Logo';
-import { Menu } from 'components/Menu/Menu';
+import { HeaderMenu } from 'components/HeaderMenu/HeaderMenu';
 import './Header.css';
 
 export const Header = () => {
@@ -9,13 +9,13 @@ export const Header = () => {
         <div className="header__top">
           <div className="container">
             <Logo />
-            <a href="tel:+12122100020" class="header__tel">
+            <a href="tel:+12122100020" className="header__tel">
               +12122100020
             </a>
           </div>
         </div>
         <div className="container">
-          <Menu />
+          <HeaderMenu />
         </div>
       </header>
     </>

@@ -3,11 +3,9 @@ import Slider from 'react-slick';
 import { MdStar } from 'react-icons/md';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import './FeaturedProducts.css';
-import DoubleSmokey from '../../images/double-smokey-bbq-angus-burger.png';
 
 export const FeaturedProducts = ({ products }) => {
   const sliderRef = useRef(null);
-  const imagePath = '/images/double-smokey-bbq-angus-burger.png';
 
   const settings = {
     dots: false,

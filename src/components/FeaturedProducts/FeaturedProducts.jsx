@@ -5,11 +5,9 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import './FeaturedProducts.css';
 import DoubleSmokey from '../../images/double-smokey-bbq-angus-burger.png';
 
-// const imagePath = 'src/images/double-smokey-bbq-angus-burger.png';
-
 export const FeaturedProducts = ({ products }) => {
   const sliderRef = useRef(null);
-  const imagePath = '../../images/double-smokey-bbq-angus-burger.png';
+  const imagePath = '/images/double-smokey-bbq-angus-burger.png';
 
   const settings = {
     dots: false,
@@ -28,15 +26,8 @@ export const FeaturedProducts = ({ products }) => {
     sliderRef.current.slickNext();
   };
 
-  const imgHandler = url => {
-    const a = require(`../../images/${url}`);
-    console.log(a);
-    return;
-  };
-
   return (
     <section className="featured products">
-      <img src="../../images/signature-sirloin.png" alt="" />
       <div className="products__top">
         <div className="products__title-container">
           <MdStar width={20} height={20} className="products__star" />
@@ -64,7 +55,7 @@ export const FeaturedProducts = ({ products }) => {
           <div key={product.id} className="products__item">
             <div className="products__item-img-container">
               <img
-                src={imgHandler(product.url)}
+                src={process.env.PUBLIC_URL + '/images/' + product.url}
                 alt={product.name}
                 className="products__item-img"
               />

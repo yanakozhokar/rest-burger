@@ -53,7 +53,7 @@ export const FeaturedProducts = ({ products }) => {
       </div>
       <Slider ref={sliderRef} {...settings}>
         {products.map(product => (
-          <ProductsItem product={product} />
+          <ProductsItem key={product.id} product={product} />
         ))}
       </Slider>
     </section>

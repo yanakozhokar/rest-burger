@@ -4,7 +4,7 @@ import './ProductsItem.css';
 
 export const ProductsItem = ({ product }) => {
   return (
-    <div key={product.id} className="products__item">
+    <div className="products__item">
       <div className="products__item-img-container">
         <img
           src={process.env.PUBLIC_URL + '/images/' + product.url}

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { MdStar } from 'react-icons/md';
 import { ImPlus } from 'react-icons/im';
+import { BsStarFill } from 'react-icons/bs';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Slider from 'react-slick';
 import './FeaturedProducts.css';
@@ -60,6 +61,16 @@ export const FeaturedProducts = ({ products }) => {
                 alt={product.name}
                 className="products__item-img"
               />
+              {product.recommended === 'true' && (
+                <div className="products__item-recommended-container">
+                  <BsStarFill
+                    width={12}
+                    height={12}
+                    className="products__recommended-icon"
+                  />
+                  <p className="products__recommended-text">Recommended</p>
+                </div>
+              )}
             </div>
             <div className="products__item-description-container">
               <h3 className="products__item-title">{product.name}</h3>

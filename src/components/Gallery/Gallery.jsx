@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react';
 import { SpecialOfferBanner } from 'components/SpecialOfferBanner/SpecialOfferBanner';
 import { FeaturedProducts } from 'components/FeaturedProducts/FeaturedProducts';
+import { SpecialBurgers } from 'components/SpecialBurgers/SpecialBurgers';
 import './Gallery.css';
-import { useEffect, useState } from 'react';
 
 export const Gallery = () => {
   const [products, setProducts] = useState([]);
@@ -18,6 +19,9 @@ export const Gallery = () => {
       <SpecialOfferBanner />
       <FeaturedProducts
         products={products.filter(product => product.type === 'featured')}
+      />
+      <SpecialBurgers
+        products={products.filter(product => product.type === 'special')}
       />
     </div>
   );

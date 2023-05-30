@@ -4,7 +4,7 @@ import './ProductsItem.css';
 
 export const ProductsItem = ({ product }) => {
   return (
-    <div className="products__item">
+    <li className="products__item">
       <div className="products__item-img-container">
         <img
           src={process.env.PUBLIC_URL + '/images/' + product.url}
@@ -32,6 +32,6 @@ export const ProductsItem = ({ product }) => {
           <ImPlus width={14} height={14} className="products__item-icon" />
         </div>
       </div>
-    </div>
+    </li>
   );
 };

@@ -28,26 +28,26 @@ export const FeaturedProducts = ({ products }) => {
   };
 
   return (
-    <section className="featured products">
-      <div className="products__top">
-        <div className="products__title-container">
-          <MdStar width={20} height={20} className="products__star" />
-          <h2 className="products__title">Featured products</h2>
+    <section className="featured-products">
+      <div className="featured-products__top">
+        <div className="featured-products__top-title-container">
+          <MdStar width={20} height={20} className="featured-products__star" />
+          <h2 className="featured-products__top-title">Featured products</h2>
         </div>
-        <div className="products__controls">
+        <div className="featured-products__top-controls">
           <button
             type="button"
-            className="products__btn-prev"
+            className="featured-products__top-btn-prev"
             onClick={onPrevBtnClick}
           >
-            <IoIosArrowBack className="products__arrow" />
+            <IoIosArrowBack className="featured-products__top-arrow" />
           </button>
           <button
             type="button"
-            className="products__btn-next"
+            className="featured-products__top-btn-next"
             onClick={onNextBtnClick}
           >
-            <IoIosArrowForward className="products__arrow" />
+            <IoIosArrowForward className="featured-products__top-arrow" />
           </button>
         </div>
       </div>

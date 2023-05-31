@@ -69,11 +69,12 @@
   font-weight: 600;
 }
 
-.products__item-icon-container {
+.products__item-btn-add {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 14px 16px;
+  border: unset;
   border-radius: 5px;
   color: #444;
   background-color: #f3f3f3;

@@ -1,8 +1,12 @@
+import { useDispatch } from 'react-redux';
 import { ImPlus } from 'react-icons/im';
 import { BsStarFill } from 'react-icons/bs';
+import { addOrderItem } from 'redux/orderSlice';
 import './ProductsItem.css';
 
 export const ProductsItem = ({ product }) => {
+  const dispatch = useDispatch();
+
   return (
     <li className="products__item">
       <div className="products__item-img-container">
@@ -28,9 +32,13 @@ export const ProductsItem = ({ product }) => {
       </div>
       <div className="products__item-price-container">
         <p className="products__item-price">${product.price}</p>
-        <div className="products__item-icon-container">
+        <button
+          type="button"
+          className="products__item-btn-add"
+          onClick={() => dispatch(addOrderItem(product))}
+        >
           <ImPlus width={14} height={14} className="products__item-icon" />
-        </div>
+        </button>
       </div>
     </li>
   );

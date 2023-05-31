@@ -1,24 +1,42 @@
+import { useSelector } from 'react-redux';
 import EmptyCart from '../../images/empty-cart.png';
 import './SidebarRight.css';
 
 export const SidebarRight = () => {
+  const order = useSelector(state => state.order);
+
+  const totalPrice = () => {
+    return order.items.reduce(
+      (total, item) => total + Number.parseFloat(item.price),
+      0
+    );
+  };
+
   return (
     <aside className="sidebar-right">
       <div className="sidebar-right__order">
         <p className="sidebar-right__order-title">My order</p>
         <div className="sidebar-right__order-container">
-          <div className="sidebar-right__empty-cart">
-            <div className="sidebar-right__empty-cart-img-container">
-              <img
-                src={EmptyCart}
-                alt="Empty cart"
-                width={174}
-                height={108}
-                className="sidebar-right__empty-cart-img"
-              />
+          {order === [] && (
+            <div className="sidebar-right__empty-cart">
+              <div className="sidebar-right__empty-cart-img-container">
+                <img
+                  src={EmptyCart}
+                  alt="Empty cart"
+                  width={174}
+                  height={108}
+                  className="sidebar-right__empty-cart-img"
+                />
+              </div>
+              <p className="sidebar-right__empty-cart-text">Cart empty</p>
             </div>
-            <p className="sidebar-right__empty-cart-text">Cart empty</p>
-          </div>
+          )}
+          {order !== [] && (
+            <div className="sidebar-right__full-cart">
+              <p className="sidebar-right__full-cart-title">Total</p>
+              <p className="sidebar-right__fukk-cart-price">${totalPrice()}</p>
+            </div>
+          )}
           <a href="/" className="sidebar-right__order-confirm">
             Confirm order
           </a>

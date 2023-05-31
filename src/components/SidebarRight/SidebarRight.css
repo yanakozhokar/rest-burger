@@ -46,6 +46,23 @@
   color: #c2c2c2;
 }
 
+.sidebar-right__full-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-right__full-cart-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sidebar-right__fukk-cart-price {
+  font-size: 28px;
+  font-weight: 500;
+}
+
 .sidebar-right__order-confirm {
   display: inline-block;
   margin-top: 20px;

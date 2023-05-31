@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import EmptyCart from '../../images/empty-cart.png';
 import './SidebarRight.css';
 
@@ -37,8 +38,8 @@ export const SidebarRight = () => {
               <p className="sidebar-right__fukk-cart-price">${totalPrice()}</p>
             </div>
           )}
-          <a
-            href="/"
+          <Link
+            to="/cart"
             className="sidebar-right__order-confirm"
             style={
               order.length !== 0 && {
@@ -48,7 +49,7 @@ export const SidebarRight = () => {
             }
           >
             Confirm order
-          </a>
+          </Link>
         </div>
       </div>
     </aside>

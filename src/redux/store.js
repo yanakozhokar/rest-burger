@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import orderReducer from './orderSlice'; // Updated import statement
+import orderReducer from './orderSlice';
 
 import {
   FLUSH,
@@ -17,12 +17,13 @@ const persistConfig = {
   storage,
 };
 
-const persistedOrder = persistReducer(persistConfig, orderReducer); // Updated variable name
+const persistedOrder = persistReducer(persistConfig, orderReducer);
 
 export const store = configureStore({
   reducer: {
     order: persistedOrder,
   },
+
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

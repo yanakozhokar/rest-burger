@@ -17,7 +17,7 @@ export const SidebarRight = () => {
       <div className="sidebar-right__order">
         <p className="sidebar-right__order-title">My order</p>
         <div className="sidebar-right__order-container">
-          {order === [] && (
+          {order.length === 0 && (
             <div className="sidebar-right__empty-cart">
               <div className="sidebar-right__empty-cart-img-container">
                 <img
@@ -31,13 +31,22 @@ export const SidebarRight = () => {
               <p className="sidebar-right__empty-cart-text">Cart empty</p>
             </div>
           )}
-          {order !== [] && (
+          {order.length !== 0 && (
             <div className="sidebar-right__full-cart">
               <p className="sidebar-right__full-cart-title">Total</p>
               <p className="sidebar-right__fukk-cart-price">${totalPrice()}</p>
             </div>
           )}
-          <a href="/" className="sidebar-right__order-confirm">
+          <a
+            href="/"
+            className="sidebar-right__order-confirm"
+            style={
+              order.length !== 0 && {
+                pointerEvents: 'all',
+                backgroundColor: '#4CAF50',
+              }
+            }
+          >
             Confirm order
           </a>
         </div>

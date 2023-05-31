@@ -74,4 +74,5 @@
   text-transform: capitalize;
   color: #fff;
   background-color: #8acb8d;
+  pointer-events: none;
 }

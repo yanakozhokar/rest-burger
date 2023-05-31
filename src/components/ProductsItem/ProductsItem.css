@@ -45,6 +45,7 @@
 }
 
 .products__item-title {
+  margin-top: 5px;
   height: 40px;
   font-size: 16px;
   font-weight: 500;

@@ -5,8 +5,19 @@ export const orderSlice = createSlice({
   initialState: { items: [] },
   reducers: {
     addOrderItem: (state, action) => {
-      return { ...state, items: [...state.items, action.payload] };
+      const existingItem = state.items.find(
+        item => item.name === action.payload.name
+      );
+
+      if (existingItem) {
+        existingItem.amount += 1;
+        existingItem.price += action.payload.price;
+      } else {
+        const newItem = { ...action.payload, amount: 1 };
+        state.items.push(newItem);
+      }
     },
+
     deleteOrderItem: (state, action) => {
       return {
         ...state,

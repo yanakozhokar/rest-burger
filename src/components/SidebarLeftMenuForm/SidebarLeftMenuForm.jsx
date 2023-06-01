@@ -1,7 +1,7 @@
 import { BiSearch } from 'react-icons/bi';
-import './MenuForm.css';
+import './SidebarLeftMenuForm.css';
 
-export const MenuForm = () => {
+export const SidebarLeftMenuForm = () => {
   return (
     <form className="menu-form">
       <input

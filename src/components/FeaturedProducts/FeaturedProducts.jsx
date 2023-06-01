@@ -23,8 +23,6 @@ export const FeaturedProducts = ({ products }) => {
   const slidesAmount = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth < 768) {
-      return 1;
-    } else if (windowWidth < 1200) {
       return 2;
     } else {
       return 3;

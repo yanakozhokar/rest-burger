@@ -12,20 +12,18 @@
 
 .header__top > .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-@media (min-width: 1200px) {
-  .header__top > .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.header__tel {
+  font-size: 24px;
+  color: #ffffff;
 }
 
-.header__tel {
-  font-size: 30px;
-  color: #ffffff;
+@media (min-width: 1200px) {
+  .header__tel {
+    font-size: 30px;
+    color: #ffffff;
+  }
 }

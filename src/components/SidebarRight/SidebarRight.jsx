@@ -7,10 +7,7 @@ export const SidebarRight = () => {
   const order = useSelector(state => state.order);
 
   const totalPrice = () => {
-    return order.items.reduce(
-      (total, item) => total + Number.parseFloat(item.price),
-      0
-    );
+    return order.items.reduce((total, item) => total + item.price, 0);
   };
 
   return (
@@ -36,7 +33,6 @@ export const SidebarRight = () => {
             <div className="sidebar-right__full-cart">
               <p className="sidebar-right__full-cart-title">Total</p>
               <p className="sidebar-right__fukk-cart-price">${totalPrice()}</p>
-              {console.log(order.length)}
             </div>
           )}
           <Link

@@ -24,9 +24,20 @@ export const orderSlice = createSlice({
         items: state.items.filter(item => item.id !== action.payload.id),
       };
     },
+
+    confirmOrder: (state, action) => {
+      fetch('https://64748ef77de100807b1b337b.mockapi.io/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(action.payload),
+      });
+    },
   },
 });
 
-export const { addOrderItem, deleteOrderItem } = orderSlice.actions;
+export const { addOrderItem, deleteOrderItem, confirmOrder } =
+  orderSlice.actions;
 
 export default orderSlice.reducer;

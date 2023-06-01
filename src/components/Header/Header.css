@@ -12,8 +12,17 @@
 
 .header__top > .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .header__top > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .header__tel {

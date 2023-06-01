@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { MdStar } from 'react-icons/md';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Slider from 'react-slick';
@@ -8,6 +8,29 @@ import './FeaturedProducts.css';
 export const FeaturedProducts = ({ products }) => {
   const sliderRef = useRef(null);
 
+  useEffect(() => {
+    const handleResize = () => {
+      sliderRef.current.slickSetOption('slidesToShow', slidesAmount());
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const slidesAmount = () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 768) {
+      return 1;
+    } else if (windowWidth < 1200) {
+      return 2;
+    } else {
+      return 3;
+    }
+  };
+
   const settings = {
     dots: false,
     infinite: true,
@@ -15,7 +38,7 @@ export const FeaturedProducts = ({ products }) => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
-    slidesToShow: 3,
+    slidesToShow: slidesAmount(),
     slidesToScroll: 1,
   };
 

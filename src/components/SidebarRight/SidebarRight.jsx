@@ -70,25 +70,23 @@ export const SidebarRight = () => {
                   </li>
                 ))}
               </ul>
-              <div className="sidebar-right__total">
-                <p className="sidebar-right__cart-total-title">Total</p>
-                <p className="sidebar-right__cart-total-price">
-                  ${totalPrice()}
-                </p>
-              </div>
             </div>
           )}
-          <Link
-            to="/cart"
-            className="sidebar-right__order-confirm"
-            style={
-              order.items.length !== 0
-                ? { pointerEvents: 'all', backgroundColor: '#4CAF50' }
-                : null
-            }
-          >
-            Confirm order
-          </Link>
+          <div className="sidebar-right__total">
+            <p className="sidebar-right__cart-total-title">Total</p>
+            <p className="sidebar-right__cart-total-price">${totalPrice()}</p>
+            <Link
+              to="/cart"
+              className="sidebar-right__order-confirm"
+              style={
+                order.items.length !== 0
+                  ? { pointerEvents: 'all', backgroundColor: '#4CAF50' }
+                  : null
+              }
+            >
+              Confirm order
+            </Link>
+          </div>
         </div>
       </div>
     </aside>

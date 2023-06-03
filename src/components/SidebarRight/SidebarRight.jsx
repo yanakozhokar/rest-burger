@@ -2,13 +2,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ImMinus, ImPlus } from 'react-icons/im';
 import { IoCloseSharp } from 'react-icons/io5';
-import EmptyCart from '../../images/empty-cart.png';
-import './SidebarRight.css';
+import { default as EmptyCart } from '../../images/empty-cart.png';
 import {
   addOrderItem,
   deleteOrderItem,
   updateOrderItemAmount,
 } from 'redux/orderSlice';
+import './SidebarRight.css';
 
 export const SidebarRight = () => {
   const order = useSelector(state => state.order);

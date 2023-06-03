@@ -1,15 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ImMinus, ImPlus } from 'react-icons/im';
 import { IoCloseSharp } from 'react-icons/io5';
 import EmptyCart from '../../images/empty-cart.png';
 import './SidebarRight.css';
+import { addOrderItem, deleteOrderItem } from 'redux/orderSlice';
 
 export const SidebarRight = () => {
   const order = useSelector(state => state.order);
+  const dispatch = useDispatch();
 
   const totalPrice = () => {
-    return order.items.reduce((total, item) => total + item.price, 0);
+    return order.items.reduce((total, item) => total + item.totalPrice, 0);
   };
 
   return (
@@ -49,10 +51,14 @@ export const SidebarRight = () => {
                     </div>
                     <div className="sidebar-right__cart-item-total-container">
                       <p className="sidebar-right__cart-item-total-price">
-                        ${item.price}
+                        ${item.totalPrice}
                       </p>
                       <div className="amount">
-                        <button type="button" className="amount-minus-btn">
+                        <button
+                          type="button"
+                          className="amount-minus-btn"
+                          onClick={() => dispatch(deleteOrderItem(item))}
+                        >
                           <ImMinus className="amount-icon" />
                         </button>
                         <input
@@ -62,7 +68,11 @@ export const SidebarRight = () => {
                           value={item.amount}
                           className="amount-input"
                         />
-                        <button type="button" className="amount-plus-btn">
+                        <button
+                          type="button"
+                          className="amount-plus-btn"
+                          onClick={() => dispatch(addOrderItem(item))}
+                        >
                           <ImPlus className="amount-icon" />
                         </button>
                       </div>

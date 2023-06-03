@@ -11,9 +11,13 @@ export const orderSlice = createSlice({
 
       if (existingItem) {
         existingItem.amount += 1;
-        existingItem.price += action.payload.price;
+        existingItem.totalPrice += action.payload.price;
       } else {
-        const newItem = { ...action.payload, amount: 1 };
+        const newItem = {
+          ...action.payload,
+          totalPrice: action.payload.price,
+          amount: 1,
+        };
         state.items.push(newItem);
       }
     },
@@ -23,7 +27,7 @@ export const orderSlice = createSlice({
         item => item.name === action.payload.name
       );
       existingItem.amount -= 1;
-      existingItem.price -= action.payload.price;
+      existingItem.totalPrice -= action.payload.price;
     },
 
     deleteOrder: (state, action) => {

@@ -70,6 +70,19 @@
   overflow-y: scroll;
 }
 
+.sidebar-right__cart-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-right__cart-list::-webkit-scrollbar-thumb {
+  background-color: #aeb0b3;
+  border-radius: 3px;
+}
+
+.sidebar-right__cart-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .sidebar-right__cart-item {
   border-bottom: 1px solid #e8e8e8;
 }
@@ -145,17 +158,4 @@
   color: #fff;
   background-color: #8acb8d;
   pointer-events: none;
-}
-
-.sidebar-right__cart-list::-webkit-scrollbar {
-  width: 6px; /* Ширина полоски прокрутки */
-}
-
-.sidebar-right__cart-list::-webkit-scrollbar-thumb {
-  background-color: #aeb0b3; /* Цвет полоски прокрутки */
-  border-radius: 3px; /* Закругление углов полоски прокрутки */
-}
-
-.sidebar-right__cart-list::-webkit-scrollbar-track {
-  background-color: transparent; /* Цвет фона трека полоски прокрутки */
 }

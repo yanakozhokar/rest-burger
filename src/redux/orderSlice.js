@@ -22,6 +22,15 @@ export const orderSlice = createSlice({
       }
     },
 
+    updateOrderItemAmount: (state, action) => {
+      const { itemId, amount } = action.payload;
+      const item = state.items.find(item => item.id === itemId);
+      if (item) {
+        item.amount = amount;
+        item.totalPrice = item.price * amount;
+      }
+    },
+
     deleteOrderItem: (state, action) => {
       const existingItem = state.items.find(
         item => item.name === action.payload.name
@@ -49,7 +58,12 @@ export const orderSlice = createSlice({
   },
 });
 
-export const { addOrderItem, deleteOrderItem, deleteOrder, confirmOrder } =
-  orderSlice.actions;
+export const {
+  addOrderItem,
+  updateOrderItemAmount,
+  deleteOrderItem,
+  deleteOrder,
+  confirmOrder,
+} = orderSlice.actions;
 
 export default orderSlice.reducer;

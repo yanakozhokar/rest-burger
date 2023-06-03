@@ -4,7 +4,11 @@ import { ImMinus, ImPlus } from 'react-icons/im';
 import { IoCloseSharp } from 'react-icons/io5';
 import EmptyCart from '../../images/empty-cart.png';
 import './SidebarRight.css';
-import { addOrderItem, deleteOrderItem } from 'redux/orderSlice';
+import {
+  addOrderItem,
+  deleteOrderItem,
+  updateOrderItemAmount,
+} from 'redux/orderSlice';
 
 export const SidebarRight = () => {
   const order = useSelector(state => state.order);
@@ -67,6 +71,7 @@ export const SidebarRight = () => {
                           max={99}
                           value={item.amount}
                           className="amount-input"
+                          onChange={e => updateOrderItemAmount(e.target.value)}
                         />
                         <button
                           type="button"

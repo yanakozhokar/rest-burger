@@ -82,6 +82,7 @@
 
 @media (min-width: 1200px) {
   .sidebar-right__cart-list {
+    height: unset;
     max-height: 425px;
   }
 }

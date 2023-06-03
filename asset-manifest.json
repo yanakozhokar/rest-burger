@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rest-burger/static/css/main.a0e58f47.css",
-    "main.js": "/rest-burger/static/js/main.371bc916.js",
+    "main.css": "/rest-burger/static/css/main.a84bfb9c.css",
+    "main.js": "/rest-burger/static/js/main.9f33a715.js",
     "static/media/special-offer.png": "/rest-burger/static/media/special-offer.a7e6082f1795f7c5e270.png",
     "static/media/logo.png": "/rest-burger/static/media/logo.4cd65162847bf817025a.png",
     "static/media/chicken-burgers.svg": "/rest-burger/static/media/chicken-burgers.5f0612a5288fa7431efd7858da7915d4.svg",
@@ -16,11 +16,11 @@
     "static/media/bell.svg": "/rest-burger/static/media/bell.7a8fb346dbf91e10d2b56b36f3055e5a.svg",
     "index.html": "/rest-burger/index.html",
     "static/media/fork-and-knife.svg": "/rest-burger/static/media/fork-and-knife.03c09c2a4c09795c74fd201fcf86d972.svg",
-    "main.a0e58f47.css.map": "/rest-burger/static/css/main.a0e58f47.css.map",
-    "main.371bc916.js.map": "/rest-burger/static/js/main.371bc916.js.map"
+    "main.a84bfb9c.css.map": "/rest-burger/static/css/main.a84bfb9c.css.map",
+    "main.9f33a715.js.map": "/rest-burger/static/js/main.9f33a715.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0e58f47.css",
-    "static/js/main.371bc916.js"
+    "static/css/main.a84bfb9c.css",
+    "static/js/main.9f33a715.js"
   ]
 }

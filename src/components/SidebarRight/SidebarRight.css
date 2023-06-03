@@ -122,13 +122,13 @@
   width: 100%;
 }
 
-.sidebar-right__cart-total-title {
+.sidebar-right__total-title {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.sidebar-right__cart-total-price {
+.sidebar-right__total-price {
   font-size: 28px;
   font-weight: 500;
 }
@@ -152,6 +152,7 @@
   height: 20px;
   border-radius: 4px;
   overflow: hidden;
+  border: 1px solid #9a9ca0;
 }
 
 .amount-minus-btn,
@@ -161,7 +162,7 @@
   align-items: center;
   width: 22px;
   height: 100%;
-  border: 1px solid #9a9ca0;
+  border: unset;
   background-color: #9a9ca0;
 }
 
@@ -175,7 +176,7 @@
   width: 30px;
   height: 100%;
   text-align: center;
-  border: 1px solid #9a9ca0;
+  border: unset;
 }
 
 .amount-input[type='number']::-webkit-inner-spin-button,

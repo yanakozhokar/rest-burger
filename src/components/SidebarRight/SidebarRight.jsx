@@ -73,8 +73,8 @@ export const SidebarRight = () => {
             </div>
           )}
           <div className="sidebar-right__total">
-            <p className="sidebar-right__cart-total-title">Total</p>
-            <p className="sidebar-right__cart-total-price">${totalPrice()}</p>
+            <p className="sidebar-right__total-title">Total</p>
+            <p className="sidebar-right__total-price">${totalPrice()}</p>
             <Link
               to="/cart"
               className="sidebar-right__order-confirm"

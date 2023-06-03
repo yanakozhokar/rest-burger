@@ -10,6 +10,9 @@ export const orderSlice = createSlice({
       );
 
       if (existingItem) {
+        if (existingItem.amount >= 99) {
+          return;
+        }
         existingItem.amount += 1;
         existingItem.totalPrice += action.payload.price;
       } else {
@@ -35,6 +38,10 @@ export const orderSlice = createSlice({
       const existingItem = state.items.find(
         item => item.name === action.payload.name
       );
+
+      if (existingItem.amount <= 1) {
+        return;
+      }
       existingItem.amount -= 1;
       existingItem.totalPrice -= action.payload.price;
     },

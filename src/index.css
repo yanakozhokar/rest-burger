@@ -11,6 +11,7 @@
   --btn-thirdly-bg: #f44336;
   --btn-thirdly-bg-hover: #df392d;
   --btn-text-primary: #ffffff;
+  --empty-cart-text: #c2c2c2;
   --footer-bottom-copyright: #8c8c8c;
   --footer-top-item: #101010;
   --form-input-border: #e2e2e9;
@@ -29,12 +30,31 @@
   --gallery-recommended-color: #ffffff;
   --header-bg: #222222;
   --header-tel: #ffffff;
+  --menu-form-icon-fill: #55595c;
   --table-body-row-border: #e2e2e9;
   --table-head-row-bg: #f8f8f8;
+  --top-menu-item-border: #ececec;
+  --top-menu-item-bg-hover: #f9f9f9;
+  --top-menu-dropdown-border: #eaebeb;
+  --sidebar-cart-list-border: #eaebeb;
+  --sidebar-cart-item-border: #e8e8e8;
+  --sidebar-cart-close-btn-fill: #4d4f56;
+  --sidebar-cart-total-title: #4d4f56;
+  --sidebar-cart-total-price: #25282b;
+  --sidebar-scroll: #aeb0b3;
   --sidebar-title: #111111;
   --sidebar-menu-item-text: #414551;
   --sidebar-menu-item-hover-text: #ff3300;
   --sidebar-menu-item-border: #f9f9f9;
+  --socials-item-bg: #f2f2f2;
+  --socials-item-bg-hover: #f6f6f6;
+  --socials-item-icon-fill: #666666;
+  --socials-item-icon-hover-fill: #3d3d3d;
+  --special-offer-banner-border: #ffffff;
+  --special-offer-banner-text: #ffffff;
+  --special-offer-info-icon-fill: #ffffff;
+  --special-offers-link-icon-bg: #f44336;
+  --special-offers-link-icon-fill: #ffffff;
 }
 
 body {

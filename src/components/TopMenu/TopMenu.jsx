@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 import { ModalPayment } from 'components/ModalPayment/ModalPayment';
+import { ModalServiceHours } from 'components/ModalServiceHours/ModalServiceHours';
 import './TopMenu.css';
 
 export const TopMenu = () => {
   const [isMenuDropdowOpen, setIsMenuDropdownOpen] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [isServiceHoursModalOpen, setIsServiceHoursOpen] = useState(false);
 
   const toggleMenuDropdown = () => {
     setIsMenuDropdownOpen(prevState => {
@@ -16,6 +18,12 @@ export const TopMenu = () => {
 
   const togglePaymentModal = () => {
     setIsPaymentModalOpen(prevState => {
+      return !prevState;
+    });
+  };
+
+  const toggleServiceHoursModal = () => {
+    setIsServiceHoursOpen(prevState => {
       return !prevState;
     });
   };
@@ -31,7 +39,9 @@ export const TopMenu = () => {
             <li className="top-menu__item" onClick={togglePaymentModal}>
               Payment methods
             </li>
-            <li className="top-menu__item">Service hours</li>
+            <li className="top-menu__item" onClick={toggleServiceHoursModal}>
+              Service hours
+            </li>
             <li className="top-menu__item">Reservation</li>
             <li className="top-menu__item">Feedback</li>
             <li className="top-menu__item">Contact</li>
@@ -56,6 +66,9 @@ export const TopMenu = () => {
       </div>
       {isPaymentModalOpen && (
         <ModalPayment togglePaymentModal={togglePaymentModal} />
+      )}
+      {isServiceHoursModalOpen && (
+        <ModalServiceHours toggleServiceHoursModal={toggleServiceHoursModal} />
       )}
     </>
   );

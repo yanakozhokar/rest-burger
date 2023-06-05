@@ -1,12 +1,21 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
+import { ModalPayment } from 'components/ModalPayment/ModalPayment';
 import './TopMenu.css';
 
 export const TopMenu = () => {
   const [isMenuDropdowOpen, setIsMenuDropdownOpen] = useState(false);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
-  const onOpenMenuBtnClick = () => {
+  const toggleMenuDropdown = () => {
     setIsMenuDropdownOpen(prevState => {
+      return !prevState;
+    });
+  };
+
+  const togglePaymentModal = () => {
+    setIsPaymentModalOpen(prevState => {
       return !prevState;
     });
   };
@@ -16,14 +25,18 @@ export const TopMenu = () => {
       <div className="top-menu">
         <div className="desktop container">
           <ul className="top-menu__list">
-            <li className="top-menu__item">Menu</li>
-            <li className="top-menu__item">Payment methods</li>
+            <li className="top-menu__item">
+              <Link to="/">Menu</Link>
+            </li>
+            <li className="top-menu__item" onClick={togglePaymentModal}>
+              Payment methods
+            </li>
             <li className="top-menu__item">Service hours</li>
             <li className="top-menu__item">Reservation</li>
             <li className="top-menu__item">Feedback</li>
             <li className="top-menu__item">Contact</li>
           </ul>
-          <button className="top-menu__open-btn" onClick={onOpenMenuBtnClick}>
+          <button className="top-menu__open-btn" onClick={toggleMenuDropdown}>
             <FiMenu className="top-menu__open-icon" />
             <p className="top__menu-open-text">Menu</p>
           </button>
@@ -41,6 +54,9 @@ export const TopMenu = () => {
           </div>
         )}
       </div>
+      {isPaymentModalOpen && (
+        <ModalPayment togglePaymentModal={togglePaymentModal} />
+      )}
     </>
   );
 };

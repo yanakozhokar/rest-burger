@@ -27,7 +27,7 @@ export const ModalServiceHours = ({ toggleServiceHoursModal }) => {
           </thead>
           <tbody className="modal__table-body">
             <tr className="modal__table-body-row">
-              <td className="modal__table-body-item" colspan={3}>
+              <td className="modal__table-body-item" colSpan={3}>
                 Restaurant is open 7 days 24 hours.
               </td>
             </tr>

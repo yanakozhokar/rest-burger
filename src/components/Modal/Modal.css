@@ -10,8 +10,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 330px;
+  min-width: 310px;
   border-radius: 10px;
+  text-transform: capitalize;
   background-color: var(--modal-bg);
   transform: translate(-50% -50%), scale(1);
   transition: transform 1000ms linear;
@@ -41,7 +42,7 @@
   font-size: 22px;
   font-weight: 600;
   line-height: 2;
-  text-transform: capitalize;
+
   color: var(--modal-top-title);
 }
 
@@ -69,14 +70,12 @@
   font-weight: 700;
   line-height: 1.1;
   text-align: center;
-  text-transform: capitalize;
   color: var(--modal-main-title);
 }
 
 .modal__main-subtitle {
   margin-top: 8px;
   text-align: center;
-  text-transform: capitalize;
   color: var(--modal-main-subtitle);
 }
 

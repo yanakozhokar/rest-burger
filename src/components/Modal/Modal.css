@@ -32,6 +32,10 @@
 }
 
 .modal__top {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
@@ -147,9 +151,22 @@
   margin-top: 30px;
 }
 
+.modal__document-paragraph-title {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .modal__document-paragraph-item-secondary,
 .modal__document-paragraph-item-thirdly {
   margin-top: 15px;
+}
+
+.modal__document-description-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .modal__back-container {

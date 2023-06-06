@@ -14,7 +14,7 @@ export const ModalRefundPolicy = ({ togglePrivacyPolicy }) => {
           <IoClose className="modal__top-close-icon" />
         </button>
       </div>
-      <div className="modal__document">
+      <div className="modal__main">
         <p className="modal__document-text">
           For refunds, charge-backs or disputes for online paid orders, please
           contact us on the details mention below. If an unrecognised

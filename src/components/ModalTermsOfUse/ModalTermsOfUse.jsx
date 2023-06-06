@@ -14,7 +14,7 @@ export const ModalTermsOfUse = ({ togglePrivacyPolicy }) => {
           <IoClose className="modal__top-close-icon" />
         </button>
       </div>
-      <div className="modal__document">
+      <div className="modal__main">
         <p className="modal__document-text">
           <span className="bold">RESTBURGER</span> ONLINE ORDERING TERMS AND
           CONDITIONS

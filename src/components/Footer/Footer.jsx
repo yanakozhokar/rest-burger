@@ -41,7 +41,9 @@ export const Footer = () => {
           <div className="footer__top-restburger">
             <p className="footer__top-title">Rest burger</p>
             <ul className="footer__top-list">
-              <li className="footer__top-item">Delivery zones</li>
+              <li className="footer__top-item">
+                <Link to="/delivery">Delivery zones</Link>
+              </li>
               <li className="footer__top-item">
                 <Link to="/offers">Special offers</Link>
               </li>

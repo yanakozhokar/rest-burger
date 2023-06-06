@@ -47,9 +47,6 @@ export const TopMenu = () => {
             <li className="top-menu__item" onClick={toggleServiceHoursModal}>
               Service hours
             </li>
-            <li className="top-menu__item">Reservation</li>
-            <li className="top-menu__item">Feedback</li>
-            <li className="top-menu__item">Contact</li>
           </ul>
           <button className="top-menu__open-btn" onClick={toggleMenuDropdown}>
             <FiMenu className="top-menu__open-icon" />
@@ -83,9 +80,6 @@ export const TopMenu = () => {
               >
                 Service hours
               </li>
-              <li className="top-menu__dropdown-menu-item">Reservation</li>
-              <li className="top-menu__dropdown-menu-item">Feedback</li>
-              <li className="top-menu__dropdown-menu-item">Contact</li>
             </ul>
           </div>
         )}

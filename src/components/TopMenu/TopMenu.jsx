@@ -20,12 +20,14 @@ export const TopMenu = () => {
     setIsPaymentModalOpen(prevState => {
       return !prevState;
     });
+    setIsMenuDropdownOpen(false);
   };
 
   const toggleServiceHoursModal = () => {
     setIsServiceHoursOpen(prevState => {
       return !prevState;
     });
+    setIsMenuDropdownOpen(false);
   };
 
   return (
@@ -57,7 +59,10 @@ export const TopMenu = () => {
         {isMenuDropdowOpen && (
           <div className="mobile container">
             <ul className="top-menu__dropdown-menu">
-              <li className="top-menu__dropdown-menu-item">
+              <li
+                className="top-menu__dropdown-menu-item"
+                onClick={toggleMenuDropdown}
+              >
                 <Link to="/">Menu</Link>
               </li>
               <li
@@ -65,6 +70,12 @@ export const TopMenu = () => {
                 onClick={togglePaymentModal}
               >
                 Payment methods
+              </li>
+              <li
+                className="top-menu__dropdown-menu-item"
+                onClick={toggleMenuDropdown}
+              >
+                <Link to="/delivery">Delivery zones</Link>
               </li>
               <li
                 className="top-menu__dropdown-menu-item"

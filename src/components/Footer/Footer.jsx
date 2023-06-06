@@ -2,14 +2,26 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Socials } from 'components/Socials/Socials';
 import { ModalPrivacyPolicy } from 'components/ModalPrivacyPolicy/ModalPrivacyPolicy';
+import { ModalTermsOfUse } from 'components/ModalTermsOfUse/ModalTermsOfUse';
+import { ModalRefundPolicy } from 'components/ModalRefundPolicy/ModalRefundPolicy';
 import PaymentMethods from '../../images/payment.png';
 import './Footer.css';
 
 export const Footer = () => {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
+  const [isTermsOfUseOpen, setIsTermsOfUseOpen] = useState(false);
+  const [isRefundPolicyOpen, setIsRefundPolicyOpen] = useState(false);
 
   const togglePrivacyPolicy = () => {
     return setIsPrivacyPolicyOpen(prevState => !prevState);
+  };
+
+  const toggleTermsOfUse = () => {
+    return setIsTermsOfUseOpen(prevState => !prevState);
+  };
+
+  const toggleRefundPolicy = () => {
+    return setIsRefundPolicyOpen(prevState => !prevState);
   };
 
   return (
@@ -41,8 +53,12 @@ export const Footer = () => {
               <li className="footer__top-item" onClick={togglePrivacyPolicy}>
                 Privacy policy
               </li>
-              <li className="footer__top-item">Terms of use</li>
-              <li className="footer__top-item">Refund policy</li>
+              <li className="footer__top-item" onClick={toggleTermsOfUse}>
+                Terms of use
+              </li>
+              <li className="footer__top-item" onClick={toggleRefundPolicy}>
+                Refund policy
+              </li>
             </ul>
           </div>
         </div>
@@ -55,6 +71,12 @@ export const Footer = () => {
       </div>
       {isPrivacyPolicyOpen && (
         <ModalPrivacyPolicy togglePrivacyPolicy={togglePrivacyPolicy} />
+      )}
+      {isTermsOfUseOpen && (
+        <ModalTermsOfUse togglePrivacyPolicy={toggleTermsOfUse} />
+      )}
+      {isRefundPolicyOpen && (
+        <ModalRefundPolicy togglePrivacyPolicy={toggleRefundPolicy} />
       )}
     </footer>
   );

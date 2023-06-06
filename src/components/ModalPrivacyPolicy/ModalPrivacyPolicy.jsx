@@ -694,6 +694,15 @@ export const ModalPrivacyPolicy = ({ togglePrivacyPolicy }) => {
             </ol>
           </li>
         </ol>
+        <div className="modal__back-container">
+          <button
+            type="button"
+            className="modal__back-btn"
+            onClick={togglePrivacyPolicy}
+          >
+            Back
+          </button>
+        </div>
       </div>
     </Modal>
   );
